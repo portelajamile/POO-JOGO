@@ -16,7 +16,7 @@ public class SaveLoadGame {
 		Arma vect[]=a.getArmVec();
 
 		for(int i=0; i<vect.length; i++){
-			oout.writeFloat(vect[i].getsize());
+			oout.writeFloat(vect[i].getThisSize());
 			oout.writeInt(vect[i].getNumPartes());
 			oout.writeDouble(vect[i].getVectorLocation()[0].getX());
 			oout.writeDouble(vect[i].getVectorLocation()[0].getY());

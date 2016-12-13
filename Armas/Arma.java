@@ -96,20 +96,18 @@ public abstract class Arma extends JPanel {
 		//
 		Graphics2D g2d = (Graphics2D) g;
 		int i;
-//		System.out.println("Cheguei Armas.paintComponent()");
-//		System.out.printf("\nCheguei numPartes = %d\tArmas.paintComponent()\n", numPartes);
+		//		System.out.println("Cheguei Armas.paintComponent()");
+		//		System.out.printf("\nCheguei numPartes = %d\tArmas.paintComponent()\n", numPartes);
 		for(i=0; i<numPartes; i++){
-				g2d.setColor(MAIN_COLOR);
-				g2d.fillRect((int)vector[i].getX(),(int)vector[i].getY(), (int) SIZE, (int) SIZE);
-				g2d.setColor(Color.GRAY);
-				g2d.drawRect((int)vector[i].getX(),(int)vector[i].getY(),(int)SIZE-1, (int)SIZE-1);
-			}
-//		System.out.printf("\nCheguei numPartes = %d\tArmas.paintComponent()\n", numPartes);
-			//	g2d.drawRect((int)vector[i].getX(),(int)vector[i].getY(),SIZE, SIZE);
+			g2d.setColor(MAIN_COLOR);
+			g2d.fillRect((int)vector[i].getX(),(int)vector[i].getY(), (int) SIZE, (int) SIZE);
+			g2d.setColor(Color.GRAY);
+			g2d.drawRect((int)vector[i].getX(),(int)vector[i].getY(),(int)SIZE-1, (int)SIZE-1);
 		}
-	public Point2D.Float getInitialLocation(){
-		return vector[0];
+		//		System.out.printf("\nCheguei numPartes = %d\tArmas.paintComponent()\n", numPartes);
+		//	g2d.drawRect((int)vector[i].getX(),(int)vector[i].getY(),SIZE, SIZE);
 	}
+
 	public boolean isHere(Float pt) {
 		for(int j=0; j<vector.length; j++)
 			if(vector[j].equals(pt))
@@ -119,5 +117,14 @@ public abstract class Arma extends JPanel {
 	float getThisSize(){
 		return SIZE;
 	}
+	protected Point2D.Float[] getVectorLocation(){
+		return vector; 
+	} 
+	protected int getRotate(){
+		return rotate; 
+	} 
+
+
+
 }
 
